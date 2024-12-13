@@ -1,0 +1,1278 @@
+:root {
+    --dark_blue : #032539;
+    --trans_dark_blue : #032539a1;
+    --light_blue : #1C768F;
+    --white : #FBF3F2;
+    --orange : #FB991C;
+    --gray : #eeecee;
+    --dark_grey : #cecece;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-size: 14px;
+}
+
+table {
+    width: 70%;
+    background: var(--white);
+    border: 3px solid var(--light_blue);
+    border-radius: 10px;
+}
+table th {
+    padding: 8px;
+    background: var(--light_blue);
+    font-size: 18px;
+    color: var(--white);
+    border-right: 2px solid var(--light_blue);
+}
+
+table th:first-child {
+    border-top-left-radius: 5px;
+}
+
+table th:last-child {
+    border-top-right-radius: 5px;
+}
+
+table td {
+    padding: 8px;
+    text-align: center;
+    border-right: 2px solid var(--light_blue);
+    border-bottom: 2px solid var(--light_blue);
+}
+table td:last-child {
+    border-right: none;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table  .options {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+table .options button {
+    padding: 5px;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+table .options .sup {
+    background: var(--orange);
+    color: var(--white);
+    border: 2px solid var(--orange);
+}
+
+table .options .sup:hover {
+    background: var(--white);
+    color: var(--orange);
+}
+
+table .options .mod {
+    background: var(--light_blue);
+    color: var(--white);
+    border: 2px solid var(--light_blue);
+}
+table .options .mod:hover {
+    background: var(--white);
+    color: var(--light_blue);
+}
+
+
+
+a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+i {
+    position: absolute;
+    color: var(--dark_blue);
+    font-size: 14px;
+}
+
+img {
+    width: 200px;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    background-color: var(--gray);
+    position: relative;
+    height: fit-content;
+}
+
+
+
+.navBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, var(--light_blue) 60%, var(--dark_blue));
+    padding-top: 20px;
+    width: 220px;
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 2;
+}
+
+.navBar .logo {
+    width: 180px;
+    margin-bottom: 20px;
+    padding: 10px;
+    padding-top: 0;
+}
+
+.navBar .navList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navBar .navList .navElement {
+    padding: 20px;
+    width: 100%;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+    padding-left: 10px;
+    transition: 0.3s;
+}
+
+.navBar .navList .navElement:hover {
+    background: var(--trans_dark_blue);
+}
+
+.navBar .navList .choisie {
+    background: var(--gray) !important;
+    color: var(--dark_blue) !important;
+    font-weight: 600;
+}
+
+.navBar .navList .choisie:hover {
+    background: var(ray);
+    color: var(--dark_blue) !important;
+    font-weight: 600;
+}
+
+.navBar .navList .navElement:last-child {
+    border-bottom: none;
+}
+
+.navBar .navList .navElement .sous_liste {
+    padding: 10px;
+    padding-bottom: 0;
+    background: var(--trans_dark_blue);
+    width: 117%;
+    margin-left: -10px;
+    padding-left: 10px;
+    height: 90%;
+    margin-top: 10px;
+    display: none;
+}
+
+.navBar .navList .navElement .sous_liste .sous_element {
+    position: relative;
+    padding: 10px;
+    border-bottom: 1px solid var(--gray);
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+.navBar .navList .navElement .sous_liste .sous_element:hover {
+    background: var(--light_blue);
+}
+
+.navBar .navList .navElement .sous_liste .sous_element:last-child {
+    border-bottom: none;
+
+}
+
+.navBar .navList .navElement .sous_liste .sous_element .fa-plus {
+    top: 3px;
+}
+
+.navBar .navList .navElement .sous_liste .sous_element .fa-list {
+    top: 7px;
+
+}
+
+.navBar .navList .navElement i {
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 15px;
+    padding: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.navBar .navOptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.navBar .navOptions .settings {
+    margin-bottom: 20px;
+    padding: 5px;
+    color: var(--white);
+    background: var(--light_blue);
+    padding-left: 20px;
+    border: 2px solid var(--light_blue);
+    border-radius: 5px;
+    font-weight: 700;
+    transition: 0.3s;
+    cursor: pointer;
+    position: relative;
+}
+
+.navBar .navOptions .settings:hover {
+    background: var(--gray);
+    color: var(--light_blue);
+    border: 2px solid var(--gray);
+}
+
+.navBar .navOptions .settings:hover i {
+    color: var(--light_blue);
+    
+}
+
+.navBar .navOptions .logout {
+    padding: 5px;
+    color: var(--white);
+    background: var(--orange);
+    padding-left: 20px;
+    border: 2px solid var(--orange);
+    border-radius: 5px;
+    position: relative;
+    font-weight: 700;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.navBar .navOptions .logout:hover {
+    background: var(--gray);
+    color: var(--orange);
+    border: 2px solid var(--gray);
+}
+
+.navBar .navOptions .logout:hover i {
+    color: var(--orange);
+    
+}
+
+.navBar .navOptions i {
+    color: var(--white);
+    left: 2px;
+    transition: 0.3s;
+}
+
+.ajoute_clients {
+    width: 100%;
+    padding-top: 200px;
+    padding-left: 250px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+    /* display: none; */
+}
+
+.ajoute_clients .titre {
+    position: fixed;
+    top: 0;
+    left: -0.5px;
+    background: var(--light_blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    color: var(--white);
+    z-index: 1;
+}
+
+.ajoute_clients .entree_clients {
+    background: var(--light_blue);
+    width: 500px;
+    height: fit-content;
+    padding: 15px 20px 20px;
+    color: var(--white);
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px grey;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    position: relative;
+    margin-left: 30px;
+}
+
+.ajoute_clients .entree_clients .ttr {
+    margin-bottom: 20px;
+}
+
+.ajoute_clients .entree_clients input {
+    margin-bottom: 10px;
+    padding: 8px;
+    padding-left: 30px;
+    border: 2px solid var(--dark_blue);
+    outline: none;
+    border-radius: 8px;
+    width: 90%;
+    margin-left: 20px;
+    font-weight: 600;
+    background: var(--gray);
+}
+
+.ajoute_clients .entree_clients i {
+    font-size: 17px;
+    color: var(--orange);
+    left: 50px;
+}
+
+.ajoute_clients .entree_clients .fa-user {
+    top: 65px;
+}
+
+.ajoute_clients .entree_clients .fa-phone {
+    top: 110px;
+}
+
+.ajoute_clients .entree_clients .fa-at {
+    top: 155px;
+}
+
+.ajoute_clients .entree_clients .fa-location-dot {
+    top: 200px;
+}
+
+.ajoute_clients .entree_clients .enreg {
+    position: relative;
+    margin-top: 20px;
+    padding: 8px;
+    padding-left: 30px;
+    width: fit-content;
+    border: 2px solid var(--trans_dark_blue);
+    border-radius: 8px;
+    background : var(--trans_dark_blue);
+    color: var(--white);
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 320px;
+    transition: 0.3s;
+}
+
+.ajoute_clients .entree_clients .enreg i {
+    left: 7px;
+    top: 6px;
+    transition: 0.3s;
+}
+
+.ajoute_clients .entree_clients .enreg:hover {
+    background: var(--gray);
+    color: var(--dark_blue);
+}
+
+.ajoute_clients .entree_clients .enreg:hover i {
+    color: var(--dark_blue);
+}
+
+
+.affiche_clients {
+    width: 100%;
+    padding-top: 200px;
+    padding-left: 250px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+    /* display: none; */
+}
+
+.affiche_clients .titre {
+    position: fixed;
+    top: 0;
+    left: -0.5px;
+    background: var(--light_blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    color: var(--white);
+    z-index: 1;
+}
+
+.affiche_clients .recherche {
+    position: absolute;
+    top: 80px;
+    border-radius: 16px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    background: var(--light_blue);
+    padding: 7px;
+    padding-right: 14px;
+}
+
+.affiche_clients .recherche .fa-magnifying-glass  {
+    color: var(--orange);
+    padding: 5px;
+    border-radius: 50%;
+    right: 12px;
+    top: 9px;
+    font-size: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.affiche_clients .recherche .fa-magnifying-glass :hover {
+    color: var(--light_blue);
+    background: var(--orange);
+}
+
+
+.affiche_clients .recherche input {
+    width: 95%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: var(--white);
+    border-radius: 10px;
+}
+
+.affiche_clients .list_clients {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    align-content:start;
+}
+
+.affiche_clients .list_clients .client {
+    padding: 10px;
+    background: var(--white);
+    border: 2px solid var(--light_blue);
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px grey;
+}
+
+.affiche_clients .list_clients .client h5 {
+    margin-bottom: 10px;
+}
+
+.affiche_clients .list_clients .client .info {
+    line-height: 24px;
+}
+
+.affiche_clients .list_clients .client .info span {
+    font-weight: 600;
+    color: var(--light_blue);
+}
+
+
+.affiche_clients .list_clients .client .info .options {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 10px;
+}
+
+.affiche_clients .list_clients .client .info .options button {
+    padding: 5px;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+.affiche_clients .list_clients .client .info .options .sup {
+    border: 2px solid var(--orange);
+    background: var(--orange);
+    color: var(--white);
+}
+
+.affiche_clients .list_clients .client .info .options .mod {
+    border: 2px solid var(--light_blue);
+    background: var(--light_blue);
+    color: var(--white);
+}
+
+.affiche_clients .list_clients .client .info .options .sup:hover {
+    background: var(--white);
+    color: var(--orange);
+}
+
+.affiche_clients .list_clients .client .info .options .mod:hover {
+    background: var(--white);
+    color: var(--light_blue);
+}
+
+
+.ajoute_commandes {
+    width: 100%;
+    padding-top: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+    /* display: none; */
+}
+
+.ajoute_commandes .titre {
+    position: fixed;
+    top: 0;
+    left: -0.5px;
+    background: var(--light_blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    color: var(--white);
+    z-index: 1;
+}
+
+.ajoute_commandes .entree_commandes {
+    background: var(--light_blue);
+    width: 500px;
+    height: fit-content;
+    padding: 15px 20px 20px;
+    color: var(--white);
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px grey;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    position: relative;
+    margin-left: 30px;
+}
+
+.ajoute_commandes .entree_commandes .ttr {
+    margin-bottom: 20px;
+}
+
+
+
+.ajoute_commandes .entree_commandes .champ {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.ajoute_commandes .entree_commandes .inputs {
+    margin-top: 20px;
+    position: relative;
+}
+.ajoute_commandes .entree_commandes input {
+    margin-bottom: 10px;
+    padding: 8px;
+    padding-left: 30px;
+    border: 2px solid var(--dark_blue);
+    outline: none;
+    border-radius: 8px;
+    margin-left: 20px;
+    font-weight: 600;
+    background: var(--gray);
+}
+.ajoute_commandes .entree_commandes .inputs.id_cl_cmm {
+    position: absolute;
+}
+
+.ajoute_commandes .entree_commandes .quantite {
+    width: 15%;
+    padding: 6.5px;
+}
+
+.ajoute_commandes .entree_commandes i {
+    font-size: 17px;
+    color: var(--orange);
+    left: 47px;
+}
+
+.ajoute_commandes .entree_commandes .fa-boxes {
+    top: 52px;
+    left: 25px;
+}
+
+.ajoute_commandes .entree_commandes .plus {
+    position: absolute;
+    top: 48px;
+    right: 80px;
+    width: 47px;
+    height: 30px;
+    border: 2px solid var(--orange);
+    background: var(--orange);
+    border-radius: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.ajoute_commandes .entree_commandes .plus:hover {
+    background: var(--white);
+}
+
+.ajoute_commandes .entree_commandes .plus i {
+    top: 5px;
+    left: 13px;
+    color: var(--white);
+    transition: 0.3s;
+}
+.ajoute_commandes .entree_commandes .plus:hover i {
+    color: var(--orange);
+}
+.ajoute_commandes .entree_commandes .enreg {
+    position: relative;
+    margin-top: 40px;
+    padding: 8px;
+    padding-left: 30px;
+    width: fit-content;
+    border: 2px solid var(--trans_dark_blue);
+    border-radius: 8px;
+    background : var(--trans_dark_blue);
+    color: var(--white);
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 320px;
+    transition: 0.3s;
+}
+
+.ajoute_commandes .entree_commandes .enreg i {
+    left: 7px;
+    top: 6px;
+    transition: 0.3s;
+}
+
+.ajoute_commandes .entree_commandes .enreg:hover {
+    background: var(--gray);
+    color: var(--dark_blue);
+}
+
+.ajoute_commandes .entree_commandes .enreg:hover i {
+    color: var(--dark_blue);
+}
+
+
+.affiche_commandes {
+    width: 100%;
+    padding-top: 200px;
+    padding-left: 250px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    /* display: none; */
+}
+
+.affiche_commandes .titre {
+    position: fixed;
+    top: 0;
+    left: -0.5px;
+    background: var(--light_blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    color: var(--white);
+    z-index: 1;
+}
+
+.affiche_commandes .recherche {
+    position: absolute;
+    top: 80px;
+    border-radius: 16px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    background: var(--light_blue);
+    padding: 7px;
+    padding-right: 14px;
+}
+
+.affiche_commandes .recherche .fa-magnifying-glass {
+    color: var(--orange);
+    padding: 5px;
+    border-radius: 50%;
+    right: 12px;
+    top: 9px;
+    font-size: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.affiche_commandes .recherche .fa-magnifying-glass:hover {
+    color: var(--light_blue);
+    background: var(--orange);
+}
+
+
+.affiche_commandes .recherche input {
+    width: 95%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: var(--white);
+    border-radius: 10px;
+}
+
+.affiche_commandes .list_commandes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-content:start;
+}
+
+.affiche_commandes .list_commandes .commande {
+    padding: 20px;
+    background: var(--white);
+    border: 2px solid var(--light_blue);
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px grey;
+    width: 600px;
+}
+
+.affiche_commandes .list_commandes .commande div h5 {
+    margin-bottom: 10px;
+}
+
+.affiche_commandes .list_commandes .commande div .cl_nom {
+    margin-bottom: 5px;
+    color: var(--dark_blue);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 0.3s;
+    width: fit-content;
+}
+.affiche_commandes .list_commandes .commande div .cl_nom:hover {
+    color: var(--orange);
+    background : var(--gray);
+}
+
+.affiche_commandes .list_commandes .commande div .info {
+    line-height: 24px;
+}
+.affiche_commandes .list_commandes .commande div .info .cont {
+   display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    width: 130%;
+    padding-bottom: 35px;
+    position: relative;
+}
+
+.affiche_commandes .list_commandes .commande div .info .cont .list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.affiche_commandes .list_commandes .commande div .info .ttr  {
+    font-weight: 600;
+    color: var(--light_blue);
+}
+
+
+.affiche_commandes .list_commandes .commande div .info .cont .pt {
+    position: absolute;
+    bottom: -10px; 
+     right: 20px;
+   
+}
+.affiche_commandes .list_commandes .commande div .info .cont .pt span {
+    font-weight: 600;
+    color: var(--light_blue);
+}
+.affiche_commandes .list_commandes .commande .info .options {
+     margin-top: 55px;
+    bottom: -10px; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+   margin-left: 15px;
+}
+
+.affiche_commandes .list_commandes .commande .info .options button {
+    padding: 5px;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+.affiche_commandes .list_commandes .commande .info .options .sup {
+    border: 2px solid var(--orange);
+    background: var(--orange);
+    color: var(--white);
+}
+
+.affiche_commandes .list_commandes .commande .info .options .mod {
+    border: 2px solid var(--light_blue);
+    background: var(--light_blue);
+    color: var(--white);
+}
+
+.affiche_commandes .list_commandes .commande .info .options .sup:hover {
+    background: var(--white);
+    color: var(--orange);
+}
+
+.affiche_commandes .list_commandes .commande .info .options .mod:hover {
+    background: var(--white);
+    color: var(--light_blue);
+}
+
+.ajoute_produits {
+    width: 100%;
+    padding-top: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+    /* display: none; */
+}
+
+.ajoute_produits .titre {
+    position: fixed;
+    top: 0;
+    left: -0.5px;
+    background: var(--light_blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    color: var(--white);
+    z-index: 1;
+}
+
+.ajoute_produits .entree_produits {
+    background: var(--light_blue);
+    width: 500px;
+    height: fit-content;
+    padding: 15px 20px 20px;
+    color: var(--white);
+    border-radius: 10px;
+    box-shadow: 2px 2px 20px grey;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    position: relative;
+    margin-left: 30px;
+}
+
+.ajoute_produits .entree_produits .ttr {
+    margin-bottom: 20px;
+}
+.ajoute_produits .entree_produits .champ {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 105%;
+    margin-bottom: 10px;
+    margin-left: -20px;
+}
+.ajoute_produits .entree_produits input {
+    margin-bottom: 10px;
+    padding: 8px;
+    padding-left: 30px;
+    border: 2px solid var(--dark_blue);
+    outline: none;
+    border-radius: 8px;
+    width: 90%;
+    margin-left: 20px;
+    font-weight: 600;
+    background: var(--gray);
+}
+
+.ajoute_produits .entree_produits .petit {
+    width: 30%;
+    padding: 8px;
+}
+
+.ajoute_produits .entree_produits i {
+    font-size: 17px;
+    color: var(--orange);
+    left: 30px;
+}
+
+.ajoute_produits .entree_produits .fa-box {
+    top: 65px;
+}
+
+.ajoute_produits .entree_produits .plus {
+    position: relative;
+    width: 45px;
+    height: 30px;
+    border: 2px solid var(--orange);
+    background: var(--orange);
+    border-radius: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.ajoute_produits .entree_produits .plus:hover {
+    background: var(--white);
+}
+
+.ajoute_produits .entree_produits .plus i {
+    top: 5px;
+    left: 13px;
+    color: var(--white);
+    transition: 0.3s;
+}
+.ajoute_produits .entree_produits .plus:hover i {
+    color: var(--orange);
+}
+
+.ajoute_produits .entree_produits .enreg {
+    position: relative;
+    margin-top: 20px;
+    padding: 8px;
+    padding-left: 30px;
+    width: fit-content;
+    border: 2px solid var(--trans_dark_blue);
+    border-radius: 8px;
+    background : var(--trans_dark_blue);
+    color: var(--white);
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 320px;
+    transition: 0.3s;
+}
+
+.ajoute_produits .entree_produits .enreg i {
+    left: 7px;
+    top: 6px;
+    transition: 0.3s;
+}
+
+.ajoute_produits .entree_produits .enreg:hover {
+    background: var(--gray);
+    color: var(--dark_blue);
+}
+
+.ajoute_produits .entree_produits .enreg:hover i {
+    color: var(--dark_blue);
+}
+
+
+.affiche_produits {
+    width: 100%;
+    padding-top: 200px;
+    padding-left: 250px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+    /* display: none; */
+}
+
+.affiche_produits .titre {
+    position: fixed;
+    top: 0;
+    left: -0.5px;
+    background: var(--light_blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    color: var(--white);
+    z-index: 1;
+}
+
+.affiche_produits .recherche {
+    position: absolute;
+    top: 80px;
+    border-radius: 16px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    background: var(--light_blue);
+    padding: 7px;
+    padding-right: 14px;
+}
+
+.affiche_produits .recherche .fa-magnifying-glass {
+    color: var(--orange);
+    padding: 5px;
+    border-radius: 50%;
+    right: 12px;
+    top: 9px;
+    font-size: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.affiche_produits .recherche .fa-magnifying-glass:hover {
+    color: var(--light_blue);
+    background: var(--orange);
+}
+
+
+.affiche_produits .recherche input {
+    width: 95%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: var(--white);
+    border-radius: 8px;
+}
+
+.affiche_produits .list_produits {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-content:start;
+}
+
+.affiche_produits .list_produits .produit{
+    padding: 15px;
+    background: var(--white);
+    border: 2px solid var(--light_blue);
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px grey;
+    width: 220px;
+}
+
+.affiche_produits .list_produits .produit h4 {
+    margin-bottom: 10px;
+}
+
+.affiche_produits .list_produits .produit .info {
+    line-height: 24px;
+}
+
+.affiche_produits .list_produits .produit .info .cont {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+} 
+
+ .affiche_produits .list_produits .produit .info .cont .list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.affiche_produits .list_produits .produit .info .ttr  {
+    font-weight: 600;
+    color: var(--light_blue);
+}
+
+.affiche_produits .list_produits .produit .info .cont .pt {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.affiche_produits .list_produits .produit .info .cont .pt span {
+    font-weight: 600;
+    color: var(--light_blue);
+}
+.affiche_produits .list_produits .produit .info .options {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 10px;
+}
+
+.affiche_produits .list_produits .produit .info .options button {
+    padding: 5px;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+.affiche_produits .list_produits .produit .info .options .sup {
+    border: 2px solid var(--orange);
+    background: var(--orange);
+    color: var(--white);
+}
+
+.affiche_produits .list_produits .produit .info .options .mod {
+    border: 2px solid var(--light_blue);
+    background: var(--light_blue);
+    color: var(--white);
+}
+
+.affiche_produits .list_produits .produit .info .options .sup:hover {
+    background: var(--white);
+    color: var(--orange);
+}
+
+.affiche_produits .list_produits .produit .info .options .mod:hover {
+    background: var(--white);
+    color: var(--light_blue);
+}
+
+
+
+
+.search_options {
+    position: absolute;
+    top: 45px;
+    left: 80px;
+    padding:15px 5px;
+    width: 80%;
+    background: var(--light_blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: none;
+}
+
+.search_options input {
+    margin-bottom: 10px;
+}
+
+form .rech {
+    position: absolute;
+    top:0;
+    right: 0;
+    padding: 22px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.pdf {
+    position: absolute;
+    top: -75px;
+    right: 0;
+    padding: 15px 30px;
+    border: 2px solid var(--light_blue);
+    background: var(--light_blue);
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.pdf:hover {
+    background: var(--white);
+}
+.pdf:hover i {
+    color: var(--light_blue);
+}
+
+.pdf i {
+    top: 8px;
+    left: 40%;
+    color: var(--white);
+    font-size: 15px;
+}
+
+
+
+
+
+/*ce qui jajout===========================================*/
+
+ 
+
+.affiche_commandes .list_commandes .commande div .info  {
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+     /* justify-content: space-between; */
+     /* width: 130%; */
+     padding-bottom: 75px;
+     position: relative;
+ }
+
+
+ .affiche_commandes .list_commandes .commande div .info  .pt {
+    position: absolute;
+   bottom: 40px;
+   right: 218px;
+}
+
+ .affiche_commandes .list_commandes .commande div .info  .pt span {
+    font-weight: 600;
+    color: var(--light_blue);
+ }
+
+.affiche_commandes .list_commandes .commande .info .options {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;  
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    width: 200px;
+}
+
+.affiche_commandes .list_commandes .commande div .titres {
+    color: var(--light_blue);
+    font-weight: 600;
+    margin-top: 10px;
+    display: flex;
+    width: 83%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.affiche_commandes .list_commandes .commande div .info .ttr1 {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: -30px;
+  margin-bottom: 5px;
+}
+ 
+.affiche_commandes .list_commandes .commande div .info .ttr1:first-child{
+    margin-top: 10px;
+}
+
+

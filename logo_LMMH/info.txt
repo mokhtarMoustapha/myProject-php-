@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: OFLGoudyStMTT
+font link: https://fonts.google.com/specimen/Sorts+Mill+Goudy
+font author: Barry Schwartz
+font author site: http://crudfactory.com/
+Slogan Font: Renner-Thin.otf
+
+icon designer: Eucalyp
+icon designer link: /eucalyp
+        
+{"bg-gradient-0":"#20484F","bg-gradient-1":"#4E9BAB","icon":"#ffffff","font":"#ffffff","slogan":"#ffffff"}
+      

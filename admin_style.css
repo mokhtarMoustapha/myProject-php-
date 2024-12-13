@@ -1,0 +1,211 @@
+:root {
+    --dark_blue : #032539;
+    --light_blue : #1C768F;
+    --white : #FBF3F2;
+    --orange : #FB991C;
+    --gray : #eeecee;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    font-size: 14px;
+}
+
+a {
+    color: var(--orange);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+i {
+    position: absolute;
+    color: var(--dark_blue);
+    font-size: 14px;
+}
+
+img {
+    width: 200px;
+}
+
+.continaire {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100dvh;
+    background: var(--gray);
+}
+
+.continaire .fenaitreLogin {
+    background: linear-gradient(41.5deg, #fff 60%, var(--light_blue) 40%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 350px;
+    width: 600px;
+    box-shadow: 2px 2px 30px #20202079 ;
+    padding: 40px 30px;
+    position: relative;
+    border-radius: 10px;
+}
+
+.fenaitreLogin .titre {
+    position: absolute;
+    top: 50px;
+}
+
+.fenaitreLogin .titre h2 {
+    font-size: 30px;
+    font-weight: 900;
+    color: var(--dark_blue);
+}
+
+.fenaitreLogin form {
+    width: 300px;
+    position: relative;
+}
+
+.fenaitreLogin form .inputs {
+    margin-bottom: 10px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.fenaitreLogin form .inputs .input {
+    padding: 6px;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid var(--dark_blue);
+    border-radius: 5px;
+    outline: none;
+    padding-left: 28px;
+}
+
+
+.fenaitreLogin form .inputs .fa-user {
+    top: 47px;
+    margin-left: 8px;
+}
+
+.fenaitreLogin form .inputs .fa-lock {
+    top: 96px;
+    margin-left: 8px;
+}
+
+.fenaitreLogin form .inputs .fa-eye , .fa-eye-slash {
+    top: 90px;
+    right: 1px;
+    cursor: pointer;
+    padding: 6px 8px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.fenaitreLogin form .inputs .fa-eye:hover , .fa-eye-slash:hover {
+    background-color: #dbdada;
+}
+
+.fenaitreLogin form .inputs p{
+    margin-top: 4px;
+    margin-left: 10px;
+}
+
+
+.fenaitreLogin form .lower a{
+    position: relative;
+    bottom: 20px;
+    transition: 0.3s;
+    width: fit-content;
+}
+
+.fenaitreLogin form .lower a::after {
+    content: '';
+    position: absolute;
+    transition: 0.4s;
+    width: 0;
+}
+.fenaitreLogin form .lower a:hover::after{
+    content: '';
+    bottom: 0;
+    right: 5px;
+    background-color: var(--orange);
+    width: 97%;
+    height: 2px;
+}
+
+.fenaitreLogin form .lower {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+}
+
+.fenaitreLogin form .log {
+    border:2px solid var(--light_blue);
+    padding: 8px 16px;
+    width: 80px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    background-color: var(--light_blue);
+    position: absolute;
+    left: 220px;
+    bottom: -40px;
+    color: var(--white);
+}
+
+.fenaitreLogin form .log:hover {
+    background: var(--orange);
+    color: var(--white);
+    border: 2px solid var(--orange);
+}
+
+.fenaitreLogin .slide {
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    width: 200px;
+}
+
+.fenaitreLogin .slide .logo {
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+.fenaitreLogin .slide p {
+    color: #fff;
+    text-align: right;
+    /* font-weight: 500; */
+}
+
+.fenaitreLogin .slide button {
+    margin-top: 40px;
+    background: #fff;
+    color: var(--light_blue);
+    border:2px solid #fff;
+    text-align: center;
+    padding: 10px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    position: absolute;
+    right: 0;
+    top: 100px;
+}
+
+.fenaitreLogin .slide button:hover {
+    background: var(--light_blue);
+    color: #fff;
+    border: 2px solid #fff;
+}
+
